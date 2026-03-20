@@ -19,3 +19,9 @@ env/
 backend/seed_output.txt
 
 backend/qdrant_db/
+
+backend/data/test_rag.txt
+
+backend/alembic_error.log
+
+*.log
