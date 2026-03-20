@@ -13,3 +13,9 @@ __pycache__/
 venv/
 env/
 .pytest_cache/
+
+.txt
+
+backend/seed_output.txt
+
+backend/qdrant_db/
