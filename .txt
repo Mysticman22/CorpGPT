@@ -1,0 +1,31 @@
+.\venv\Scripts\python.exe -m uvicorn app.main:app --reload --port 8000
+
+The department for the Super Admin is "Headquarters".
+
+Here is the full profile created by that initial setup script:
+
+Email: admin@corpgpt.com
+Password: Admin@1234
+Department: Headquarters
+Full Name: System Admin
+Position: C-Level Executive
+Role: SUPER_ADMIN
+
+
+cd c:\CorpGPT\backend
+
+python -m uvicorn app.main:app --reload
+
+
+
+cd c:\CorpGPT\frontend
+npm run dev
+
+
+
+
+Sarthak
+mysticeldrago@gmail.com
+HR
+Senior Manager
+manager12

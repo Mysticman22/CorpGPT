@@ -1,0 +1,327 @@
+/* ==========================================
+   CORPGPT DESIGN TOKENS
+   Modern, immersive design system
+   ========================================== */
+
+:root {
+    /* ==========================================
+     COLOR SYSTEM - HSL for easy manipulation
+     ========================================== */
+
+    /* Primary Brand Colors */
+    --color-primary-h: 250;
+    --color-primary-s: 90%;
+    --color-primary-l: 60%;
+    --color-primary: hsl(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l));
+    --color-primary-light: hsl(var(--color-primary-h), var(--color-primary-s), 70%);
+    --color-primary-dark: hsl(var(--color-primary-h), var(--color-primary-s), 50%);
+
+    /* Secondary Accent Colors */
+    --color-secondary-h: 200;
+    --color-secondary-s: 100%;
+    --color-secondary-l: 55%;
+    --color-secondary: hsl(var(--color-secondary-h), var(--color-secondary-s), var(--color-secondary-l));
+    --color-secondary-light: hsl(var(--color-secondary-h), var(--color-secondary-s), 65%);
+
+    /* Accent/Highlight */
+    --color-accent-h: 320;
+    --color-accent-s: 100%;
+    --color-accent-l: 65%;
+    --color-accent: hsl(var(--color-accent-h), var(--color-accent-s), var(--color-accent-l));
+
+    /* Success, Warning, Error */
+    --color-success: hsl(145, 65%, 55%);
+    --color-warning: hsl(40, 95%, 60%);
+    --color-error: hsl(0, 85%, 60%);
+
+    /* Neutral Grays - Dark Mode First */
+    --color-gray-50: hsl(240, 10%, 95%);
+    --color-gray-100: hsl(240, 8%, 90%);
+    --color-gray-200: hsl(240, 7%, 80%);
+    --color-gray-300: hsl(240, 6%, 65%);
+    --color-gray-400: hsl(240, 5%, 50%);
+    --color-gray-500: hsl(240, 5%, 40%);
+    --color-gray-600: hsl(240, 6%, 30%);
+    --color-gray-700: hsl(240, 7%, 20%);
+    --color-gray-800: hsl(240, 8%, 12%);
+    --color-gray-900: hsl(240, 10%, 8%);
+
+    /* Background & Surface Colors */
+    --bg-primary: var(--color-gray-900);
+    --bg-secondary: var(--color-gray-800);
+    --bg-tertiary: var(--color-gray-700);
+
+    /* Text Colors */
+    --text-primary: var(--color-gray-50);
+    --text-secondary: var(--color-gray-300);
+    --text-tertiary: var(--color-gray-400);
+
+    /* Cyberguard Theme Extras */
+    --color-cg-bg: #08091a;
+    --color-cg-card: #11122b;
+    --color-cg-purple: #9333ea;
+    --color-cg-magenta: #db2777;
+    --gradient-cg: linear-gradient(135deg, var(--color-cg-purple), var(--color-cg-magenta));
+    --border-cg: hsla(240, 10%, 60%, 0.1);
+
+    /* Border Colors */
+    --border-color: hsla(240, 10%, 25%, 0.5);
+    --border-color-light: hsla(240, 10%, 35%, 0.3);
+
+    /* ==========================================
+     GRADIENTS
+     ========================================== */
+
+    --gradient-primary: linear-gradient(135deg,
+            hsl(var(--color-primary-h), var(--color-primary-s), 60%),
+            hsl(var(--color-secondary-h), var(--color-secondary-s), 55%));
+
+    --gradient-accent: linear-gradient(135deg,
+            hsl(var(--color-accent-h), var(--color-accent-s), 60%),
+            hsl(var(--color-primary-h), var(--color-primary-s), 65%));
+
+    --gradient-overlay: linear-gradient(to bottom,
+            hsla(var(--color-primary-h), 50%, 10%, 0.95),
+            hsla(var(--color-secondary-h), 40%, 8%, 0.98));
+
+    --gradient-mesh:
+        radial-gradient(at 0% 0%, hsla(var(--color-primary-h), 70%, 50%, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, hsla(var(--color-secondary-h), 70%, 50%, 0.12) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, hsla(var(--color-accent-h), 70%, 50%, 0.1) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, hsla(200, 70%, 50%, 0.1) 0px, transparent 50%);
+
+    /* ==========================================
+     GLASSMORPHISM
+     ========================================== */
+
+    --glass-bg: hsla(240, 10%, 12%, 0.65);
+    --glass-border: hsla(240, 10%, 60%, 0.2);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+    --glass-blur: blur(20px);
+
+    /* ==========================================
+     SHADOWS
+     ========================================== */
+
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 2px -1px rgba(0, 0, 0, 0.2);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -4px rgba(0, 0, 0, 0.4);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.4);
+    --shadow-glow: 0 0 20px rgba(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.4);
+
+    /* ==========================================
+     TYPOGRAPHY
+     ========================================== */
+
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'Fira Code', 'Courier New', monospace;
+
+    --font-size-xs: 0.75rem;
+    /* 12px */
+    --font-size-sm: 0.875rem;
+    /* 14px */
+    --font-size-base: 1rem;
+    /* 16px */
+    --font-size-lg: 1.125rem;
+    /* 18px */
+    --font-size-xl: 1.25rem;
+    /* 20px */
+    --font-size-2xl: 1.5rem;
+    /* 24px */
+    --font-size-3xl: 1.875rem;
+    /* 30px */
+    --font-size-4xl: 2.25rem;
+    /* 36px */
+
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    --line-height-tight: 1.25;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.75;
+
+    /* ==========================================
+     SPACING
+     ========================================== */
+
+    --spacing-1: 0.25rem;
+    /* 4px */
+    --spacing-2: 0.5rem;
+    /* 8px */
+    --spacing-3: 0.75rem;
+    /* 12px */
+    --spacing-4: 1rem;
+    /* 16px */
+    --spacing-5: 1.25rem;
+    /* 20px */
+    --spacing-6: 1.5rem;
+    /* 24px */
+    --spacing-8: 2rem;
+    /* 32px */
+    --spacing-10: 2.5rem;
+    /* 40px */
+    --spacing-12: 3rem;
+    /* 48px */
+    --spacing-16: 4rem;
+    /* 64px */
+
+    /* ==========================================
+     BORDER RADIUS
+     ========================================== */
+
+    --radius-sm: 0.375rem;
+    /* 6px */
+    --radius-md: 0.5rem;
+    /* 8px */
+    --radius-lg: 0.75rem;
+    /* 12px */
+    --radius-xl: 1rem;
+    /* 16px */
+    --radius-2xl: 1.5rem;
+    /* 24px */
+    --radius-full: 9999px;
+
+    /* ==========================================
+     TRANSITIONS
+     ========================================== */
+
+    --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    /* ==========================================
+     Z-INDEX LAYERS
+     ========================================== */
+
+    --z-base: 0;
+    --z-dropdown: 1000;
+    --z-sticky: 1100;
+    --z-fixed: 1200;
+    --z-modal-backdrop: 1300;
+    --z-modal: 1400;
+    --z-popover: 1500;
+    --z-tooltip: 1600;
+}
+
+/* ==========================================
+   ANIMATION KEYFRAMES
+   ========================================== */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
